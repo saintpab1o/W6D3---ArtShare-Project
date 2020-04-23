@@ -1,6 +1,13 @@
 class ArtworksController < ApplicationController
     def index
-        render json: Artwork.all
+        
+        if params[:user_id]
+            @user = User.find(params[:user_id])
+
+            render json: (@user.artworks + @user.shared_artworks).uniq
+        else
+            render json: Artwork.all
+        end
     end
 
     def create
