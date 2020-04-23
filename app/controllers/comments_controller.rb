@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
     def index
-        if params[:comment_id]
+        if params[:artwork_id]
             @artwork = Artwork.find(params[:artwork_id])
 
             render json: @artwork.comments
