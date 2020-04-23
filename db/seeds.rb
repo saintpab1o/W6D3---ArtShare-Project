@@ -25,5 +25,12 @@ User.destroy_all
  share4 = ArtworkShare.create!(artwork_id: a3.id, viewer_id: user_1.id)
  share5 = ArtworkShare.create!(artwork_id: a2.id, viewer_id: user_2.id)
 
+ c1 = Comment.create!(artwork_id: a1.id, user_id: user_2.id, body: "a")
+ c2 = Comment.create!(artwork_id: a1.id, user_id: user_3.id, body: "b")
+ c3 = Comment.create!(artwork_id: a1.id, user_id: user_1.id, body: "c")
+ c4 = Comment.create!(artwork_id: a2.id, user_id: user_2.id, body: "d")
+ c5 = Comment.create!(artwork_id: a2.id, user_id: user_1.id, body: "a")
+ c6 = Comment.create!(artwork_id: a3.id, user_id: user_3.id, body: "adagh")
+
  
 
