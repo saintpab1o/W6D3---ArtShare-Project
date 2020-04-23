@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, only:[:index, :show, :create, :update, :destroy]
    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   #  get 'users', to: 'users#index', as: 'users'
@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   #  patch 'users/:id', to: 'users#update'
   #  put 'users/:id', to: 'users#update'
   #  delete 'users/:id', to: 'users#destroy'  
+
+  resources :artworks, only:[:index, :show, :create, :update, :destroy]
+
+  
+  resources :artwork_shares, only:[:index, :show, :create, :destroy]
 
 
 
